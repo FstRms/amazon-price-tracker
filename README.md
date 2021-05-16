@@ -1,6 +1,6 @@
 # Amazon Price Tracker
 
-Python Script to track price of a product on Amazon México website and notify via email.
+Python Script to track price of a product on Amazon México website and notify when it drops from desired price via email.
 
 
 ### Prerequisites

@@ -29,7 +29,7 @@ cost = float(price_formatted)
 
 email_message = None
 
-if cost < float(MINIMAL_PRICE):
+if cost <= float(MINIMAL_PRICE):
     email_message = f"Subject:Amazon Price Drop\n\nDude your product is at ${cost}.\nGO! GO! GO! {PRODUCT_URL}."
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         connection.starttls()
