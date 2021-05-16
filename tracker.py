@@ -23,8 +23,10 @@ response = requests.get(PRODUCT_URL, headers=headers)
 soup = BeautifulSoup(response.content, "lxml")
 locate_price = soup.find(id="price_inside_buybox").get_text()
 price = locate_price.split("$")[1].strip()
-price_unformatted = price.split(",")
-price_formatted = price_unformatted[0] + price_unformatted[1]
+if "," in price:
+    price_unformatted = price.split(",")
+    price_formatted = price_unformatted[0] + price_unformatted[1]
+
 cost = float(price_formatted)
 
 email_message = None
