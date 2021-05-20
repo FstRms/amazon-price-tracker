@@ -6,7 +6,7 @@ Python Script to track price of a product on Amazon México website and notify w
 ### Prerequisites
 
 - Python 3.9+
-- [Poetry 0.12+](https://python-poetry.org/docs/#installation)
+- [Poetry 1.0.+](https://python-poetry.org/docs/#installation)
 - A Gmail account
 - Email to recieve the notification.
 ### Note
