@@ -1,17 +1,24 @@
 # Amazon Price Tracker
 
-Python Script to track price of a product on Amazon México website and notify when it drops from desired price via email.
+Python Scripts to track price of a product on Amazon website and notify when it drops from desired price via email.
 
+### Note
+
+- There is a version that works with Beautiful Soup(BS4) package and one with selenium.
+- It is recommended to run this script on [pyhtonanywhere](https://www.pythonanywhere.com/).
+- Or if you are an advanced user you could run it as a cron job on your computer.
 
 ### Prerequisites
 
 - Python 3.9+
-- [Poetry 0.12+](https://python-poetry.org/docs/#installation)
-- A Gmail account
+- [Poetry 1.0.0+](https://python-poetry.org/docs/#installation)
+- A Gmail account.
 - Email to recieve the notification.
-### Note
-- It is recommended to run this script on [pyhtonanywhere](https://www.pythonanywhere.com/).
-- Or if you are an advanced user you could run it as a cron job on your computer
+- For the Selenium version:
+    - [Your version of chrome.](https://www.whatismybrowser.com/detect/what-version-of-chrome-do-i-have)
+    - [Chromedriver.](https://chromedriver.chromium.org/downloads)
+    - Path to the Chromedriver
+
 #### Installing
 - It is recommended to create a new [gmail account](https://accounts.google.com/signup).
 - Make sure 2-Step Verification is off.
@@ -21,7 +28,7 @@ Python Script to track price of a product on Amazon México website and notify w
 - Run poetry install.
 - Run poetry shell.
 - Run the command: 
-    - python tracker.py
+    - python tracker_bs4.py // python tracker_selenium.py
 - Check inbox for notification.
 
 ## Preview

@@ -18,14 +18,17 @@ headers = {
     "accept-language": "es-ES,es;q=0.9,en;q=0.8",
 }
 response = requests.get(PRODUCT_URL, headers=headers)
-# print(response.status_code)
+
 
 soup = BeautifulSoup(response.content, "lxml")
 locate_price = soup.find(id="price_inside_buybox").get_text()
 price = locate_price.split("$")[1].strip()
+
 if "," in price:
     price_unformatted = price.split(",")
     price_formatted = price_unformatted[0] + price_unformatted[1]
+else:
+    price_formatted = price
 
 cost = float(price_formatted)
 
